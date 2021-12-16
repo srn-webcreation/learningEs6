@@ -24,9 +24,20 @@ function calcFactory(defaultNumber) {
         }
     }
 }
+const defaultNumber  = 100
+const plusNumber     = 5;
+const minusNumber    = 2;
+const multiplyNumber = 10;
+const divideNumber   = 13;
 
-const calc = calcFactory(10);
-console.log("10 + 5 = ", calc.plus(5));
-console.log("15 - 2 = ", calc.minus(2));
-console.log("13 * 10 = ", calc.multiply(10));
-console.log("130 / 13 = ", calc.divide(13));
+const calc = calcFactory(defaultNumber);
+
+const plusResult     = calc.plus(plusNumber);
+const minusResult    = calc.minus(minusNumber);
+const multiplyResult = calc.multiply(multiplyNumber);
+const divideResult   = calc.divide(divideNumber);
+
+console.log(`${defaultNumber} + ${plusNumber} = ${plusResult}`);
+console.log(`${defaultNumber} + ${minusNumber} = ${minusResult}`);
+console.log(`${defaultNumber} + ${multiplyNumber} = ${multiplyResult}`);
+console.log(`${defaultNumber} + ${divideNumber} = ${divideResult}`);
