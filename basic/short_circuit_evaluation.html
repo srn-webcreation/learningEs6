@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>short-circuit evaluation(短絡評価)</title>
+</head>
+<body>
+    <script>
+        function orFn(weight,height){
+            console.log("-----------orFn----------");
+            if (firstFn(weight) || secondFn(height)) return true;
+            else return false;
+        }
+
+        function andFn(weight,height){
+            console.log("-----------andFn----------");
+            if (firstFn(weight) && secondFn(height)) return true;
+            else return false;
+        }
+
+        function firstFn(weight){
+            console.log("firstFn");
+            return weight > 60;
+        }
+
+        function secondFn(height){
+            console.log("secondFn");
+            height > 180;
+        }
+
+        orFn(6,120); //-> secondFnは呼ばれる
+        andFn(6,120); //-> secondFnは呼ばれない
+    </script>
+</body>
+</html>

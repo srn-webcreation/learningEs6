@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>配列操作</title>
+</head>
+<body>
+    <h1>花の名前</h1>
+    <p>桜</p>
+    <p>ツバキ</p>
+    <p>スイセン</p>
+    <p>サザンカ</p>
+    <p>ヤマユリ</p>
+
+    <script>
+        let fruits = ["りんご", "なし", "ぶどう", "バナナ"];
+        /**
+         * 練習1. 上記変数fluitsは果物の名前が入った配列を指し示します。
+         * 以下操作を行うことでリンゴを取り出せることを確認してください。
+         * ※ただし配列から消えるわけではない
+         */ 
+        const apple = fruits[0];
+        console.log(apple);
+        console.log(fruits);
+
+        /**
+         * 練習2. 上記練習から分かるように配列[インデックス番号]とすることで、
+         * 配列内のインデックス番号で指し示された要素を取り出すことができる。 
+         * それを踏まえて、「なし」、「ぶどう」、「バナナ」それぞれを
+         * 取り出しログ出力(console.log)してください。
+         */ 
+
+        // なし
+
+        // ぶどう
+
+        // バナナ
+
+        /**
+         * 練習3. 配列.indexOf({要素名})とすることで
+         * 指定した名前の要素のインデックス番号が確認できます。
+         * なお、存在しない場合は-1が返ってくることに注意。
+         * ログ出力させてインデックス番号が返却されることを確かめましょう
+         */
+
+        // りんご。
+        console.log(fruits.indexOf("りんご")); 
+
+        // ぶどう
+        console.log(fruits.indexOf("ぶどう")); 
+
+        // ドラゴンフルーツ
+        console.log(fruits.indexOf("ドラゴンフルーツ"));
+
+        /**
+         * 練習3. 上記indexOf()で返ってきたインデックス番号により
+         * 要素の存在確認ができるということであります。
+         * 例：fruits.indexOf("りんご") → 0 これは-1でないので存在する
+         *     fruits.indexOf("パイナップル") → -1 これは-1なので存在しない
+         * これを踏まえて以下の存在確認用関数isExistInArrayを完成させてください。
+         */
+        // 引数1のarrayには配列が割り当てられることを想定
+        // 引数2のvalueには存在確認したい要素の名前が割り当てられることを想定
+        // 存在すればtrue, しなければfalseを返すようにしましょう。
+        function isExistInArray(array, value) {
+            if (array.indexOf(value) === -1) {
+
+            } else {
+
+            }
+        }
+        // 上記関数が完成したら下記コメントアウトを外して結果を確認しましょう。
+
+        // console.log("りんご", isExistInArray(fruits, "りんご"));
+
+        // console.log("パイナップル", isExistInArray(fruits, "パイナップル"));
+
+        // const fruit = "バナナ";
+        // if (isExistInArray(fruits, fruit)) {
+        //     console.log(`${fruit}は存在します！！`);
+        // } else {
+        //     console.log(`${fruit}は存在しません...`);
+        // }
+
+        /**
+         * 練習4. 配列[インデックス番号] = "新しい要素名"とすることで
+         * 対象のインデックス番号の要素名が更新されます。
+         * 以下操作を行い更新できることを確認しましょう。
+         */
+        
+        // 「ぶどう」を「ブドウ」に変える※下記行の//を外してください。
+        // fruits[2] = "ブドウ";
+        // console.log(fruits[2]);
+        // console.log(fruits);
+
+        /**
+         * 練習4. 上記練習を踏まえて、
+         * 配列fruitsにある「バナナ」をプルーンに更新してみましょう。
+         */
+        // バナナをプルーンに変える
+
+        /**
+         * 練習5. 配列.push("新しい要素名")とすれば、
+         * 配列の最後に新しい要素が追加されます。
+         * 以下操作でそれを確認しましょう。
+         */
+
+        // ※下記行の//を外してください。
+        // fruits.push("もも");
+        // console.log(fruits);
+
+         // ※下記行の//を外してください。
+        // fruits.push("きいちご");
+        // console.log(fruits);
+
+        /**
+         * 練習6. 上記練習を踏まえて
+         * 配列fruitsに「グレープフルーツ」と「イチゴ」を追加しましょう。
+         */
+
+         /**
+         * 練習7. 配列.unshift("新しい要素名")とすれば、
+         * 配列の最初に新しい要素が追加されます。
+         * 以下操作でそれを確認しましょう。
+         */
+
+        // ※下記行の//を外してください。
+        // fruits.unshift("イチジク");
+        // console.log(fruits);
+        // console.log(fruits[0]);
+
+        /**
+         * 練習8. 上記練習を踏まえて
+         * 配列fruitsの最初に「紀州南高梅」を追加しましょう。
+         */
+
+         /**
+         * 練習9. 配列.shift()とすれば、
+         * 配列の最初の要素を削除できます。
+         * 以下操作でそれを確認しましょう。
+         */
+
+        // ※下記行の//を外してください。
+        // console.log(fruits[0]);
+        // fruits.shift();
+        // console.log(fruits[0]);
+
+        /**
+         * 練習10. 配列.pop()とすれば、
+         * 配列の最後の要素を削除できます。
+         * 以下操作でそれを確認しましょう。
+         */
+
+        // ※下記行の//を外してください。
+        // console.log(fruits);
+        // fruits.pop();
+        // console.log(fruits);
+
+        /**
+         * 練習11. DOM操作を体験しましょう。
+         * document.querySelectorAll({タグ名やクラス名、id名など})
+         * で該当するHTML要素のDOMデータにアクセスすることができます。
+         * 変数名 =  document.queruSelectorAll({タグ名やクラス名、id名など})
+         * とすれば今後は指定した変数名でDOMデータを取り扱うことができます。
+         * querySelectorAllは該当するHTML要素を配列にそれぞれ格納します。
+         * 以下操作を行い動きを確かめてみましょう。
+         */
+
+        // webページに表示中のp要素のDOMデータを配列にしまいます。
+        // ※下記行の//を外してください。
+        //  let flowers = document.querySelectorAll("p");
+        //  console.log(flowers);
+        //  console.log(flowers[0]);
+        //  console.log(flowers[0].textContent);
+        //  console.log(flowers[1].textContent);
+
+        /**
+         * 練習12. 上記練習を踏まえて、
+         * webページ上に表示されている「サザンカ」を「バラ」に変更してみましょう。
+         */
+
+         /**
+         * 練習13. 配列.lengthとすれば配列内の要素の数を確認できます。
+         * 以下で試してみましょう。
+         */
+
+        // ※下記行の//を外してください。
+        // console.log(fruits.length);
+        // console.log(flowers.length);
+
+        /**
+         * 練習14. 配列fruitsから「りんご」を取り出したいときに
+         * 配列[インデックス番号]としましたが、操作を繰り返しているうちに
+         * インデックス番号0に「りんご」以外の要素が割り当てられてしまっている可能性があります。
+         * そんなときに使えるのが連想配列です。
+         * 以下操作で連想配列の使い方を確認しましょう。
+         */
+
+        // ※下記行の//を外してください。
+        // let namedFruits = {apple: "りんご", grape: "ぶどう", orange: "みかん"};
+        // console.log(namedFruits);
+        // console.log(namedFruits["apple"]);
+        // console.log(namedFruits.apple);
+        // console.log(namedFruits["grape"]);
+        // console.log(namedFruits.grape);
+
+        // ※下記行の//を外してください。
+        // namedFruits.banana = "バナナ";
+        // console.log(namedFruits);
+
+        // ※下記行の//を外してください。
+        // namedFruits["pineapple"] = "パイナップル";
+        // console.log(namedFruits);
+
+        // ※下記行の//を外してください。
+        // delete namedFruits["banana"];
+        // console.log(namedFruits);
+
+        // ※下記行の//を外してください。
+        // delete namedFruits.pineapple;
+        // console.log(namedFruits);
+
+        /**
+         * 練習15. 配列とfor文やwhile文といった繰り返し処理は相性が良いです。
+         * 配列flowersの中に入っている要素名をまとめてログ出力させてみましょう
+         */
+
+        // ※下記行の//を外してください。
+        // for (let index = 0; index < fruits.length; index++) {
+        //     console.log(index, fruits[index]);
+        // }
+
+        /**
+         * 練習16. 上記練習を踏まえて、
+         * webページ上にpタグで表示させている内容をまとめてログ出力させてみましょう。
+         */
+
+        /**
+         * 練習16. 上記練習を踏まえて、
+         * 連想配列namedFruitsの中に入っている要素をまとめてログ出力させてみましょう。
+         */
+        
+        /**
+         * 練習17. 上記練習はfor ~ in を利用することでさらに読みやすく記述することができます。
+         * 一度試してみましょう。
+         * 他にもfor ~ of や forEach※連想配列には使いづらい　なんかもあります。
+         * 余裕がれあれば調べてみましょう
+         */
+
+        // ※下記行の//を外してください。
+        // for (key in namedFruits) {
+        //     console.log(key, namedFruits[key]);
+        // }
+
+
+    </script>
+</body>
+</html>
