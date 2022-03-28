@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本その3</title>
+</head>
+<body>
+    <script>
+        /**
+         * 練習1. 次の文字列中の「@」のインデックス番号をログ出力してください。
+         * ヒント：{文字列}.indexOf({対象の文字})でインデックス番号を受け取れます。
+         */
+        let string1 = "test@test.com";
+        
+         /**
+         * 練習2. 次の文字列のうち3文字目以降をログ出力してください。
+         * ヒント：文字列オブジェクトのslice()かsubstring()もしくはsubstr()を使いましょう。
+         * ヒント2：{文字列}.slice({開始位置}, {終了位置})で切り取りができます。
+         * ヒント3：ヒント2の切り取り範囲としては「開始位置 <= 範囲 < 終了位置」となるので注意。
+         */
+        let string2 = "re@test.com";
+
+        /**
+         * 練習3. メールアドレスのバリデーション関数を作成しましょう。
+         * ルールは以下の通りです。
+         * - 「@」から始まらないこと
+         * - 「@」を 1 つのみ含んでいること
+         * - 「@」の後に「.」があること
+         * なお当関数の戻り値は
+         * - バリデーションチェック→OK : true
+         * - バリデーションチェック→NG : false
+         * とする。
+         */
+        function isValidEmail(email){
+             // 関数を完成させてください
+        }
+
+    </script>
+</body>
+</html>
